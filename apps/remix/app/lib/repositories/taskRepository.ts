@@ -1,7 +1,7 @@
 import { ulid } from "ulid";
 
+import { rpc } from "~/lib/utils/hc";
 import type { Task, TaskContents } from "../types/task";
-import { rpc } from "../utils/hc";
 import { mock, mockWithArray } from "../utils/mock";
 
 type TaskRepository = {
