@@ -6,7 +6,6 @@
 	"scripts": {
 		"build": "remix vite:build",
 		"dev": "remix vite:dev",
-		"cf-start": "wrangler pages dev ./build/client",
 		"lint": "biome check --write",
 		"start": "remix-serve ./build/server/index.js",
 		"typecheck": "tsc"
