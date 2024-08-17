@@ -1,6 +1,8 @@
 import { serve } from "@hono/node-server";
+import { configDotenv } from "dotenv";
 import { Hono } from "hono";
 import { exampleRoute } from "./example";
+configDotenv();
 
 const app = new Hono().basePath("/api");
 const route = app
@@ -9,7 +11,7 @@ const route = app
 	})
 	.route("/example", exampleRoute);
 
-const port = 3000;
+const port = Number(process.env.PORT) || 3000;
 console.log(`Server is running on port ${port}`);
 
 serve({
