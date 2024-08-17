@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"strict": true,
+		"lib": ["ESNext"],
+		"types": ["node"],
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"paths": {
+			"~/*": ["./src/*"]
+		},
+		"declaration": true
+	},
+	"include": ["src/**/*"]
+}
