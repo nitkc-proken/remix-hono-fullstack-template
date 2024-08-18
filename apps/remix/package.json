@@ -29,12 +29,15 @@
 		"ulid": "^2.3.0"
 	},
 	"devDependencies": {
+		"@mdx-js/rollup": "^3.0.1",
 		"@remix-run/dev": "^2.11.1",
 		"@types/react": "^18.2.20",
 		"@types/react-dom": "^18.2.7",
 		"api": "workspace:*",
 		"autoprefixer": "^10.4.19",
 		"postcss": "^8.4.38",
+		"remark-frontmatter": "^5.0.0",
+		"remark-mdx-frontmatter": "^5.0.0",
 		"tailwindcss": "^3.4.4",
 		"tsx": "^4.7.1",
 		"typescript": "^5.1.6",

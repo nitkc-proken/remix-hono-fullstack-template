@@ -1,4 +1,9 @@
 import path from "node:path";
+
+import mdx from "@mdx-js/rollup";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+
 import { vitePlugin as remix } from "@remix-run/dev";
 import { installGlobals } from "@remix-run/node";
 import {
@@ -18,6 +23,9 @@ export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			isSPA ? forceSPA() : undefined,
+			mdx({
+				remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+			}),
 			remix({
 				future: {
 					v3_fetcherPersist: true,
