@@ -17,7 +17,7 @@ export async function loader() {
 		ENV:
 			typeof document === "undefined"
 				? ({
-						HOST: PUBLIC_ENV.HOST as string,
+						APP_HOST: PUBLIC_ENV.APP_HOST as string,
 						USE_MOCK: PUBLIC_ENV.USE_MOCK,
 					} satisfies Env)
 				: {},

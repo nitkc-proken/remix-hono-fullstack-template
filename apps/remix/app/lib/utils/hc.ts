@@ -5,4 +5,4 @@ import { isUsingMock } from "./mock";
 
 export const rpc = isUsingMock
 	? (undefined as unknown as ReturnType<typeof hc<ApiType>>)
-	: hc<ApiType>(PUBLIC_ENV.HOST);
+	: hc<ApiType>(PUBLIC_ENV.APP_HOST);
